@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   ArrowRight,
@@ -46,8 +45,8 @@ function Navbar() {
       </Link>
 
       <div className="nav-links">
-        <a href="/#features">Features</a>
-        <a href="/#how-it-works">How it works</a>
+        <a href="/SkillRoute-AI/#features">Features</a>
+        <a href="/SkillRoute-AI/#how-it-works">How it works</a>
       </div>
 
       <div className="nav-actions">
@@ -89,7 +88,7 @@ function Home() {
               <Link to="/signup" className="primary-btn">
                 Build My Roadmap <ArrowRight size={18} />
               </Link>
-              <a href="#how-it-works" className="secondary-btn">
+              <a href="/SkillRoute-AI/#how-it-works" className="secondary-btn">
                 Explore Features
               </a>
             </div>
@@ -269,7 +268,6 @@ function Step({ number, title, text }) {
     </div>
   );
 }
-
 
 function AuthPage({ signup = false }) {
   const navigate = useNavigate();
@@ -461,7 +459,6 @@ function AuthPage({ signup = false }) {
   );
 }
 
-
 function Dashboard() {
   const [jobDescription, setJobDescription] = useState("");
   const [resume, setResume] = useState(null);
@@ -582,7 +579,7 @@ function Dashboard() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/SkillRoute-AI">
       <Routes>
         <PageRoute path="/" element={<Home />} />
         <PageRoute path="/login" element={<AuthPage />} />
